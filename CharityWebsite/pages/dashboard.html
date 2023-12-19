@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<link rel="stylesheet" href="/css/styles.css" />
+
+	<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+	<title>1up Funding</title>
+</head>
+<body>
+	<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light"> <!-- -->
+		<a class="navbar-brand" href="/">1up Funding</a> <!--navbar-brand-->
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+			<div class="navbar-nav mr-auto">
+				<a class="nav-item nav-link" href="/">Home</a>
+				<a class="nav-item nav-link active" href="/pages/dashboard.html">Dashboard</a>
+				<a class="nav-item nav-link" href="/pages/about.html">About</a>
+				<a class="nav-item nav-link" href="/pages/charities.html">Charities</a>
+				<!-- <a class="nav-item nav-link" href="/pages/searchResults.html">(Temp) Search Results</a> -->
+				<!-- <a class="nav-item nav-link" href="/pages/reviews.html">Customer Reviews</a> -->
+				
+	    	</div>
+	    	<form class="form-inline" action="/pages/default.html" method="get">
+			    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+			    <button class="my-btn my-btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+			</form>
+	  	</div>
+	</nav>
+	<div class="content-padding">
+		<!--These will be replaces with canvases for charts-->
+		<!-- <canvas id="myChart" style="width:100%;max-width:700px"></canvas> -->
+		<div class="row">
+			<div class="col-sm-6">
+				<div class="canvas-container">
+					<p class="responsive-text">Fund Balance</p>
+					<div>
+						<canvas id="fund-chart" class="canvas-limits"></canvas> <!--  -->
+					</div>
+				</div>
+				<!-- <div style="width: 100%;padding-bottom: 50%; /* 2:1; */position: relative;">
+					<div id="myChart" style="text-align:center;color:black;padding:10px;background-color:#ccc;position: absolute;top: 10px; bottom: 10px; left: 10px; right: 10px;">
+						Fund Performance
+					</div>
+				</div> -->
+			</div>
+			<div class="col-sm-6">
+				<!-- <div style="width:100%;max-width:576px;max-height:300px;text-align: center;">
+					<canvas id="dow-chart" style="width:100%;max-width:700px"></canvas>
+				</div> -->
+				<!-- <div style="width: 100%;padding-bottom: 50%; /* 2:1; */position: relative;">
+					<div id="myChart" style="text-align:center;color:black;padding: 10px;background-color:#bbb;position: absolute;top: 10px; bottom: 10px; left: 10px; right: 10px;">
+						DOW or S&P Performance
+					</div>
+				</div> -->
+				<div class="canvas-container">
+					<p class="responsive-text">Bitcoin</p>
+					<div>
+						<canvas id="bitcoin-chart" class="canvas-limits"></canvas>
+					</div>
+				</div>
+				<!-- <div style="width: 100%;padding-bottom: 50%; /* 2:1; */position: relative;">
+					<div id="myChart" style="text-align:center;color:black;padding: 10px;background-color:#ddd;position: absolute;top: 10px; bottom: 10px; left: 10px; right: 10px;">
+						Bitcoin Performance
+					</div>
+				</div> -->
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-6">
+				<table class="dashboard-table">
+					<caption class="dashboard-table-caption"><strong class="responsive-text" style="width:100%;">Allocations</strong></caption>
+					<tr>
+						<th class="responsive-table-text dashboard-table-cell">Charity</th>
+						<th class="responsive-table-text dashboard-table-cell">Percent</th>
+						<th class="responsive-table-text dashboard-table-cell">Amount</th>
+						<th class="responsive-table-text dashboard-table-cell">Growth</th>
+					</tr>
+					<tr>
+						<td class="responsive-table-text dashboard-table-cell">Gracious Givers</td>
+						<td class="responsive-table-text dashboard-table-cell">25%</td>
+						<td class="responsive-table-text dashboard-table-cell">$2500</td>
+						<td class="responsive-table-text dashboard-table-cell">$3407.90</td>
+					</tr>
+					<tr>
+						<td class="responsive-table-text dashboard-table-cell">Life of Giving</td>
+						<td class="responsive-table-text dashboard-table-cell">40%</td>
+						<td class="responsive-table-text dashboard-table-cell">$4000</td>
+						<td class="responsive-table-text dashboard-table-cell">$5452.64</td>
+					</tr>
+					<tr>
+						<td class="responsive-table-text dashboard-table-cell">Anonymous Hope</td>
+						<td class="responsive-table-text dashboard-table-cell">35%</td>
+						<td class="responsive-table-text dashboard-table-cell">$3500</td>
+						<td class="responsive-table-text dashboard-table-cell">$4771.06</td>
+					</tr>
+				</table>
+			</div>
+			<div class="col-sm-6">
+				<table class="dashboard-table">
+					<caption class="dashboard-table-caption"><strong class="responsive-text" style="width:100%;">Donation History</strong></caption>
+					<tr>
+						<th class="responsive-table-text dashboard-table-cell">Date</th>
+						<th class="responsive-table-text dashboard-table-cell">Amount</th>
+						<th class="responsive-table-text dashboard-table-cell">Overall Growth</th>
+					</tr>
+					<tr>
+						<td class="responsive-table-text dashboard-table-cell">1/1/2020</td>
+						<td class="responsive-table-text dashboard-table-cell">$10000</td>
+						<td class="responsive-table-text dashboard-table-cell">$13631.61</td>
+					</tr>
+					<tr>
+						<td class="responsive-table-text dashboard-table-cell">This</td>
+						<td class="responsive-table-text dashboard-table-cell">is</td>
+						<td class="responsive-table-text dashboard-table-cell">filler</td>
+					</tr>
+					<tr>
+						<td class="responsive-table-text dashboard-table-cell">This</td>
+						<td class="responsive-table-text dashboard-table-cell">is</td>
+						<td class="responsive-table-text dashboard-table-cell">filler</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	<div>
+
+	<!-- <canvas id="myChart" style="width:100%;max-width:700px"></canvas> -->
+
+	<!--footer-->
+	<div class="footer-spacer"></div>
+	<div class="footer">
+		<div class="row">
+			<div class="left col-sm footer-left">
+				<a class="hyperlink-text" href="https://github.com/johnny123214133/creative-project-2" target="_blank">project repository</a>
+			</div>
+			<div class="col-sm footer-right">
+				<a class="hyperlink-text" href="/pages/photoCredit.html">photo credits</a>
+			</div>
+		</div>
+	</div>
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+	<script src="/scripts/dashboard.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>
