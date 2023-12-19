@@ -2,3 +2,8 @@
 WilliamsFractalTradingAlgorithm/.DS_Store
 NeuralStyleTransfer/.DS_Store
 CharityWebsite/.DS_Store
+
+WilliamsFractalTradingAlgorithm/data/*
+WilliamsFractalTradingAlgorithm/.ipynb_checkpoints/*
+NeuralStyleTransfer/.ipynb_checkpoints/*
+NeuralStyleTransfer/generatedImages/*
